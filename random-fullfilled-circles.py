@@ -71,3 +71,40 @@ def main():
     
 if __name__ == "__main__":
     main()
+    
+    
+    
+    
+    
+### if you want to print random colors together, implement below code to the above code.
+def fiber_circle(fiber, width, height):
+    fiber_r=25
+    fiber_num = 100
+    cursor_size = 20
+    fiber.hideturtle()
+    fiber.speed("fastest")
+    fiber.screen.colormode(255)
+    
+    fiber.screen.bgcolor("white")
+    fiber.shape("circle")
+    fiber.shapesize(fiber_r / cursor_size)
+    fiber.penup()
+    fibers = [] 
+    
+    for _ in range(fiber_num):
+        fiber.color(randint(0, 255),randint(0, 255),randint(0, 255))
+        fiberr = fiber.clone()
+        fiberr.setposition(
+            randint(-width / 2, width / 2),
+            randint(-height / 2, height / 2),
+        )
+
+        while any((a.distance(fiberr) < fiber_r for a in fibers)):
+            fiberr.setposition(
+                randint(- width / 2, width / 2 ),
+                randint(- height / 2, height / 2),
+            )
+        
+        fiberr.stamp()
+        
+        fibers.append(fiberr) 
