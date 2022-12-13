@@ -12,7 +12,7 @@ import json
 def fiber_circle(fiber, width, height):
     fiber_r=25
     fiber_num = 100
-    cursor_size = 20
+    cursor_size = 25
     fiber.hideturtle()
     fiber.screen.bgcolor("white")
     fiber.color("black")
