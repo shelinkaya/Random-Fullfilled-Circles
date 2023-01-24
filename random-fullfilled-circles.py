@@ -1,4 +1,4 @@
-#below code draw 100 randomized fullfilled circles and save as .svg and .json
+#below code draw 100 randomized fullfilled circles and save as .svg and .json//it prints randomly distributed circles and also with the same radius
 
 from random import randint
 from svg_turtle import SvgTurtle
